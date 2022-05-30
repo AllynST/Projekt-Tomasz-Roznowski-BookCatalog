@@ -1,4 +1,5 @@
 ﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
+using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Genre;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,12 +36,12 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
         private void Authors_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new AuthorPage();
+            Main.Content = new AuthorsPage();
         }
 
         private void Genres_Click(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new GenreList();
         }
 
         private void ReadList_Click(object sender, RoutedEventArgs e)

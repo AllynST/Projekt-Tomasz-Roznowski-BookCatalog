@@ -31,18 +31,32 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
             Author testAuthor = new Author()
             {
-                Surname = "mickiewsicz",
-                Name = "adaś",                
-                Description = "ugabuga",
+                Author_ID = 11,
+                Surname = "Olaf",
+                Name = "Iskra",                
+                Description = "Ciekawy zawodnik jest grany",
                 DateOfBirth = new DateTime(2000, 12, 12)
 
 
             };
-            
+
+            Book testBook = new Book()
+            {
+                Title = "Dziady",
+                Genre = new Genre()
+                {
+                    Genre_Name = "Fantasy"
+                },
+                Language="Spanglish",
+                Format=Format.MOBI,
+                Author = testAuthor
+            };
+
+            /*dbContext.Books.Add(testBook); */           
 
             /*dbContext.Authors.Add(testAuthor);  */
-                
-           
+
+
 
 
             await dbContext.SaveChangesAsync();

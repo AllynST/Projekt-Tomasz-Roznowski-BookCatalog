@@ -7,21 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AuthorPage.xaml.cs">
+    <Compile Update="UserControlPages\Author\AddAuthor.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Books.xaml.cs">
+    <Compile Update="UserControlPages\Author\AuthorPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Author\AuthorsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Book\Books.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Genre\GenreDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Genre\GenreList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AuthorPage.xaml">
+    <Page Update="UserControlPages\Author\AddAuthor.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Books.xaml">
+    <Page Update="UserControlPages\Author\AuthorPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Author\AuthorsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Book\Books.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Genre\GenreDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Genre\GenreList.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

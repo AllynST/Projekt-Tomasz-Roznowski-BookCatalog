@@ -20,7 +20,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=./BookCatalog.db", option => {
+            optionsBuilder.UseSqlite("Data Source=BookCatalog.db", option => {
                 option.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
             });
             base.OnConfiguring(optionsBuilder);
