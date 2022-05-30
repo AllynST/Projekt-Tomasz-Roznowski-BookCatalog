@@ -1,12 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Projekt_Tomasz_Roznowski_BookCatalog.Models
 {
-    internal class Genre
+    public class Genre
     {
+        public Genre()
+        {
+            Books = new HashSet<Book>();
+        }
+        [Key]
+        public int Genre_ID { get; set; }
+        public string Genre_Name { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="BookCatalog"
+        Height="700" Width="1120"
+        WindowStyle="None"  
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"        
+        >
+    <Border CornerRadius="40" Background="#272537">
 
-    </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="380"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Button}" >
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Foreground" Value="WhiteSmoke"/>
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="Margin" Value="15 15 0 0"/>
+
+
+                    </Style>
+                </StackPanel.Resources>
+                <Button Foreground="#6479C4" FontSize="40">Menu</Button>
+                <Button Name="Authors" Click="Authors_Click" >Authors</Button>
+                <Button Name ="Books" Click="Books_Click" >Books</Button>
+                <Button Name="Genres" Click="Genres_Click">Genres</Button>
+                <Button Name="ReadList" Click="ReadList_Click">Read list</Button>
+                <Button Name="FBooks" Click="FBooks_Click">Finished books</Button>
+
+            </StackPanel>
+
+
+            <ContentControl Name="Main" Grid.Column="1" Grid.RowSpan="3">
+
+            </ContentControl>
+
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom" Margin="15">
+                <Image Source="/Images/user.png" Height="59" Width="67"/>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Foreground="WhiteSmoke"><Run Text="Allyn"/></TextBlock>
+                    <TextBlock Height="auto" Foreground="WhiteSmoke" TextWrapping="Wrap" Opacity="0.5" Width="96"><Run Text="Tomaszroznowskii@gmail.com"/></TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+
+
+
+
+        </Grid>
+
+    </Border>
+
+
 </Window>

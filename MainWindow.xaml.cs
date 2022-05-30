@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,36 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
+        {            
+            InitializeComponent();            
+        }
+       
+        private void Books_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+            Main.Content = new Books();
+        }
+
+        private void Authors_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new AuthorPage();
+        }
+
+        private void Genres_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ReadList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FBooks_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
