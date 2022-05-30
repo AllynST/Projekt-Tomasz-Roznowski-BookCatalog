@@ -23,8 +23,8 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime CreatedDate { get; set; }
-        public ICollection<Book> FinishedBooks { get; set; }
-        public ICollection<Book> ReadList { get; set; }
+        public ICollection<Book>? FinishedBooks { get; set; }
+        public ICollection<Book>? ReadList { get; set; }
 
     }
 }

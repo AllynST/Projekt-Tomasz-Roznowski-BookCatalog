@@ -1,5 +1,6 @@
 ﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
 using Projekt_Tomasz_Roznowski_BookCatalog.Models;
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -15,18 +16,42 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     /// </summary>
     public partial class App : Application
     {
-        public CatalogContext _context = new CatalogContext();
-        
+        public static CatalogContext dbContext = new();
 
-        private void Application_Startup(object sender, StartupEventArgs e)
+        private async void Application_Startup(object sender, StartupEventArgs e)
         {
             Author author = new Author() { Surname = "mickiewsicz", Name = "adaś" };
+            
+            
+            await dbContext.Database.EnsureCreatedAsync();
 
-            _context.Authors.Add(author);
+            /*dbContext.Users.Add(
+                new User() { User_Name = "Allyn", Name = "Allan", Surname = "Surname", Password = "zaq1WSX", Email = "Allyn@gmail.com", CreatedDate = DateTime.Now }
+                );*/
+
+            Author testAuthor = new Author()
+            {
+                Surname = "mickiewsicz",
+                Name = "adaś",                
+                Description = "ugabuga",
+                DateOfBirth = new DateTime(2000, 12, 12)
+
+
+            };
+            
+
+            /*dbContext.Authors.Add(testAuthor);  */
+                
+           
+
+
+            await dbContext.SaveChangesAsync();
 
             
             MainWindow mainWindow = new();
             mainWindow.Show();
+
+
         }
     }
 

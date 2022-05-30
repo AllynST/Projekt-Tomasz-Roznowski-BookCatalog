@@ -17,7 +17,6 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Models
         public int Book_ID { get; set; }
         public string Title { get; set; }
         public Genre Genre { get; set; }
-
         public ICollection<Review> Reviews { get; set; }    
         public string Language { get; set; }
         public Author Author { get; set; }        

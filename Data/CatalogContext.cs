@@ -25,14 +25,24 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Data
             });
             base.OnConfiguring(optionsBuilder);
         }
-        
-                
-            
-                
-                     
-           
-                       
-              
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>().ToTable("Books");
+            modelBuilder.Entity<Author>().ToTable("Authors");
+            modelBuilder.Entity<Genre>().ToTable("Genres");
+            modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<Review>().ToTable("Reviews");
+
+        }
+
+
+
+
+
+
+
+
 
     }
 }

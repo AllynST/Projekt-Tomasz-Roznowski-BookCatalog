@@ -15,7 +15,8 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Models
         }
         [Key]
         public int Genre_ID { get; set; }
+        [Required]
         public string Genre_Name { get; set; }
-        public ICollection<Book> Books { get; set; }
+        public ICollection<Book>? Books { get; set; }
     }
 }
