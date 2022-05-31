@@ -25,5 +25,19 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
 
             return query;
         }
+
+        public static void AddGenre(Genre genre)
+        {
+            _context.Genres.Add(genre);
+            _context.SaveChanges();
+        }
+        public static void DeleteGenre(int id)
+        {
+            Genre genre = _context.Genres.Find(id);
+            _context.Genres.Remove(genre);
+            _context.SaveChanges();
+        }
+
+        
     }
 }

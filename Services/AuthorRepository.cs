@@ -30,14 +30,31 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
             //NOT TESTED
             Author author = _context.Authors.Find(id);
             _context.Authors.Remove(author);
+            _context.SaveChanges();
         }
         public static void AddAuthor(Author author)
         {
             _context.Authors.Add(author);
             _context.SaveChanges();
         }
-        //TODO modify
+        public static void ModifyAuthor(Author author)
+        {
 
+            //UNTESTED
+            Author before = _context.Authors.Find(author.Author_ID);
+
+            before.Name = author.Name;
+            before.Surname = author.Surname;
+            before.Description = author.Description;
+            before.DateOfBirth = author.DateOfBirth;            
+
+            _context.Authors.Update(before);
+            _context.SaveChanges();
+
+        }
 
     }
+
+
+}
 }

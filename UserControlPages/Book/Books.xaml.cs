@@ -23,14 +23,11 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     public partial class Books : UserControl
     {
         public Books()
-        {
-            async void Local()
-            {
-                BooksTable.ItemsSource = await BooksRepository.GetBooks();
-            }
+        {    
 
             InitializeComponent();
-            Local();
+            BooksTable.ItemsSource = BooksRepository.GetBooks();
+
         }
 
         private void BookPage_Click(object sender, RoutedEventArgs e)

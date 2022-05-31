@@ -19,5 +19,40 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
             return _context.Books.ToList();
         }
 
+        public static Book GetBook(int id)
+        {
+            return _context.Books.Where(x=>x.Book_ID == id).FirstOrDefault();
+        }
+
+        public static void AddBook(Book book)
+        {
+            _context.Books.Add(book);
+            _context.SaveChanges();
+        }
+        public static void DeleteBook(int id)
+        {
+            //NIEPRZESTESTOWANE
+            Book book = _context.Books.Find(id);
+            _context.Remove(book);
+            _context.SaveChanges();
+
+        }
+
+        public static void ModifyBook(Book book)
+        {
+
+            //UNTESTED
+            Book before = _context.Books.Find(book.Book_ID);
+
+            before.Title = book.Title;
+            before.Author = book.Author;
+            before.Format = book.Format;
+            before.Language = book.Language;
+
+            _context.Books.Update(before);
+            _context.SaveChanges();
+
+        }
+
     }
 }
