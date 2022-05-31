@@ -33,9 +33,6 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Author
                AuthorSurname.Text = author.Surname;
                AuthorDate.Text = author.DateOfBirth.ToString("d");
                AuthorDesc.Text = author.Description;
-
-            
-
         }
     }
 }

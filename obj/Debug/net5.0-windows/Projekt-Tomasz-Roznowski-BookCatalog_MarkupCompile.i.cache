@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\App.xaml
 7-193813531
 
-25-1735797068
+27-316078442
 213-2022747839
 MainWindow.xaml;UserControlPages\Author\AddAuthor.xaml;UserControlPages\Author\AuthorPage.xaml;UserControlPages\Author\AuthorsPage.xaml;UserControlPages\Book\Books.xaml;UserControlPages\Genre\GenreDetails.xaml;UserControlPages\Genre\GenreList.xaml;
 
-True
+False
 

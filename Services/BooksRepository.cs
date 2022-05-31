@@ -14,9 +14,9 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         private static CatalogContext _context = new();
 
 
-        public async static Task<List<Book>> GetBooks()
+        public static List<Book> GetBooks()
         {
-            return await _context.Books.ToListAsync();
+            return _context.Books.ToList();
         }
 
     }

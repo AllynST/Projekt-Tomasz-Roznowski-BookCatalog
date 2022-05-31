@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Projekt_Tomasz_Roznowski_BookCatalog.Data
 {
     public class CatalogContext :DbContext
-    {       
+    {
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Genre> Genres { get; set; }
@@ -33,7 +33,6 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Data
             modelBuilder.Entity<Genre>().ToTable("Genres");
             modelBuilder.Entity<User>().ToTable("Users");
             modelBuilder.Entity<Review>().ToTable("Reviews");
-
         }
 
 

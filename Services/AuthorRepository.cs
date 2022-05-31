@@ -25,6 +25,19 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
             return _context.Authors.Include(x=>x.Books).Where(item=> item.Author_ID == id).First();
         }
 
+        public static void DeleteAuthor(int id)
+        {
+            //NOT TESTED
+            Author author = _context.Authors.Find(id);
+            _context.Authors.Remove(author);
+        }
+        public static void AddAuthor(Author author)
+        {
+            _context.Authors.Add(author);
+            _context.SaveChanges();
+        }
+        //TODO modify
+
 
     }
 }
