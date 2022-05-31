@@ -8,6 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
         <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Genres</TextBlock>
+        <Button Width="100" Name="AddGenreBTN" Click="AddGenreBTN_Click" HorizontalAlignment="Right" Margin="0 0 20 10">Add Genre</Button>
         
         <ListView Name="GenreTable" FontFamily="Courier New">
 
@@ -15,7 +16,7 @@
 
                 <GridView AllowsColumnReorder="false"  ColumnHeaderToolTip="Author table">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Genre_ID}" Header="ID" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Genre_ID}" Header="ID" Width="25"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Genre_Name}" Header="Name" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Books.Count}" Header="Book count" Width="100"/>                    
 
@@ -23,6 +24,15 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Show" Tag="{Binding Genre_ID}"  Name="DisplayGenreBooksBTN" Click="DisplayGenreBooksBTN_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Delete genre">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="x" Tag="{Binding Genre_ID}"  Name="DeleteGenreBTN" Click="DeleteGenreBTN_Click"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
 

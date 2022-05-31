@@ -22,7 +22,6 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         public static Genre GetGenreById(int id)
         {
             Genre query = _context.Genres.Include(x => x.Books).Where(item => item.Genre_ID == id).First();
-
             return query;
         }
 

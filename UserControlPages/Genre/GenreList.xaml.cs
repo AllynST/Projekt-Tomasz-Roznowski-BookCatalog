@@ -39,5 +39,19 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Genre
             Content = new GenreDetails(int.Parse(BookID.ToString()));
             MessageBox.Show(BookID.ToString());
         }
+
+        private void AddGenreBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AddGenre AddGenreWindow = new();            
+            AddGenreWindow.Show();
+        }
+
+        private void DeleteGenreBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var Button = sender as Button;
+            var DeleteID = int.Parse(Button.Tag.ToString());
+            GenresRepository.DeleteGenre(DeleteID);
+            Content = new GenreList();
+        }
     }
 }

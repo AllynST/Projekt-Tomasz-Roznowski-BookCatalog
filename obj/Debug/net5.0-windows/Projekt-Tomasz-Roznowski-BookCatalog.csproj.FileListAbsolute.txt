@@ -69,3 +69,5 @@ C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\GenreList.baml
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\GenreDetails.g.cs
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\GenreDetails.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\AddGenre.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\AddGenre.baml

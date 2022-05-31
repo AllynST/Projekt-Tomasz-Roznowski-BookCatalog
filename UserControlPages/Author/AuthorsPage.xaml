@@ -9,32 +9,33 @@
     
     <StackPanel>
         <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Authors</TextBlock>
-        <Button Width="120" HorizontalAlignment="Right" Margin="0 0 25 10" Content="Add Author"/>
+        <Button Width="120" HorizontalAlignment="Right" Margin="0 0 25 10" Name="AddAuthorBTN" Click="AddAuthorBTN_Click" Content="Add Author"/>
         <ListView Name="AuthorsTable" FontFamily="Courier New">
             
             <ListView.View>
 
                 <GridView AllowsColumnReorder="false"  ColumnHeaderToolTip="Author table">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Author_ID}" Header="ID" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Author_ID}" Header="ID" Width="20"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="100"/>                    
                     <GridViewColumn DisplayMemberBinding="{Binding DateOfBirth}" Header="DateOfBirth" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Books.Count}" Header="Books" Width="100"/>                    
+                    <GridViewColumn DisplayMemberBinding="{Binding Books.Count}" Header="Books" Width="100"/>                  
 
-                    <GridViewColumn Header="">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Add Book" Tag="{Binding Author_ID}"  Name="AddBookToAuthor" Click="AddBookToAuthor_Click"></Button>
-                            </DataTemplate>                            
-                        </GridViewColumn.CellTemplate>
-                        
-                    </GridViewColumn>
 
                     <GridViewColumn Header="">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>                                
                                 <Button Content="Go to author page" Tag="{Binding Author_ID}"  Name="AuthorPage" Click="AuthorPage_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Delete Author">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="X" Tag="{Binding Author_ID}"  Name="DeleteAuthor" Click="DeleteAuthor_Click"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
 

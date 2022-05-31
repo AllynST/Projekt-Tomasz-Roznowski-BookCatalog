@@ -19,6 +19,9 @@
     <Compile Update="UserControlPages\Book\Books.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControlPages\Genre\AddGenre.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControlPages\Genre\GenreDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Genre\AddGenre.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlPages\Genre\GenreDetails.xaml">

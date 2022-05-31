@@ -38,18 +38,29 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
         }
 
-        private void AddBookToAuthor_Click(object sender, RoutedEventArgs e)
-        {
-            var Button = sender as Button;
-            var AuthorID = Button.Tag;
-            MessageBox.Show(AuthorID.ToString());
-        }
         private void AuthorPage_Click(object sender, RoutedEventArgs e)
         {
             var Button = sender as Button;
             var AuthorID = Button.Tag;            
             
             Content = new AuthorPage(int.Parse(AuthorID.ToString()));
+        }
+
+        private void DeleteAuthor_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox()
+            var Button = sender as Button;
+            var DeleteID = int.Parse(Button.Tag.ToString());
+
+            AuthorRepository.DeleteAuthor(DeleteID);
+            Content = new AuthorsPage();
+
+        }
+
+        private void AddAuthorBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AddAuthor window = new();
+            window.Show();
         }
     }
 }

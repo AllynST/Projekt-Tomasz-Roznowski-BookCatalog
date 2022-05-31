@@ -8,27 +8,47 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <StackPanel>
-            <StackPanel.Resources>
-                <Style  TargetType="{x:Type TextBlock}">
-                    <Setter Property="Foreground" Value="WhiteSmoke" />
-                </Style>
-            </StackPanel.Resources>
-            
-                        <TextBlock Text="Author name" />
-                        <TextBlock Name ="AuthorName" />
+        
 
-                        <TextBlock Text="Author Surname" />
-                        <TextBlock Name="AuthorSurname" />
+        <Grid Margin="35">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
 
-                        <TextBlock Text="Author Date of birth" />
-                        <TextBlock Name="AuthorDate"/>
+            <Image></Image>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <StackPanel.Resources>
+                    <Style  TargetType="{x:Type TextBlock}">
+                        <Setter Property="Foreground" Value="WhiteSmoke" />
+                    </Style>
+                </StackPanel.Resources>
 
-                        <TextBlock Text="Description" />
-                        <TextBlock Name="AuthorDesc"/>
 
 
-        </StackPanel>
+                
+                <TextBlock Text="Author name" />
+                <TextBlock Name ="AuthorName" />
+
+                <TextBlock Text="Author Surname" />
+                <TextBlock Name="AuthorSurname" />
+
+                <TextBlock Text="Author Date of birth" />
+                <TextBlock Name="AuthorDate"/>
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0">
+                <TextBlock Foreground="WhiteSmoke" FontSize="35">Opis:</TextBlock>
+                <TextBlock Foreground="WhiteSmoke" Name="AuthorDesc"></TextBlock>
+            </StackPanel>
+        </Grid>
 
     </Grid>
 </UserControl>
