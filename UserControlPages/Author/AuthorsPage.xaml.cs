@@ -23,9 +23,9 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     /// <summary>
     /// Logika interakcji dla klasy Author.xaml
     /// </summary>
-    public partial class AuthorsPage : UserControl
+    public partial class BooksPage : UserControl
     { 
-        public AuthorsPage()
+        public BooksPage()
         {
             InitializeComponent();
 
@@ -53,7 +53,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
             var DeleteID = int.Parse(Button.Tag.ToString());
 
             AuthorRepository.DeleteAuthor(DeleteID);
-            Content = new AuthorsPage();
+            Content = new BooksPage();
 
         }
 

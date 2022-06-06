@@ -71,3 +71,15 @@ C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\GenreDetails.baml
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\AddGenre.g.cs
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Genre\AddGenre.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\Book.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\Book.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\AddBook.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\AddBook.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Login\Login.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Login\Register.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Login\Login.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Login\Register.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\FinishedBooks.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\ReadList.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\FinishedBooks.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\ReadList.baml

@@ -46,7 +46,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Author
 
             Application.Current.Windows[2].Close();
 
-            Content = new AuthorsPage();
+            Content = new BooksPage();
 
 
         }

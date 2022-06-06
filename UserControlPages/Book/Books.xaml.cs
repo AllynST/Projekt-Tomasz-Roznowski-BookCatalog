@@ -1,5 +1,6 @@
 ﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
 using Projekt_Tomasz_Roznowski_BookCatalog.Services;
+using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,52 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
         private void BookPage_Click(object sender, RoutedEventArgs e)
         {
-        
+            var Button = sender as Button;
+            int BookID = int.Parse(Button.Tag.ToString());
+
+            Content = new Genre(BookID);
         }
 
+        private void AddBookBTN_Click(object sender, RoutedEventArgs e)
+        {
+            AddBook addBook = new AddBook();
+            addBook.Show();
+        }
+
+        private void DeleteBookBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var Button = sender as Button;
+            int BookID = int.Parse(Button.Tag.ToString());
+
+            BooksRepository.DeleteBook(BookID);
+
+            Content = new Books();
+
+        }
+        private void FilterBTN_Click(object sender, RoutedEventArgs e)
+        {            
+            string filter = FilterBox.SelectedItem.ToString().Split(' ')[1] ; 
+            
+            if(filter == "No")
+            {
+                BooksTable.ItemsSource = BooksRepository.GetBooks();
+            }
+            else
+            {
+                BooksTable.ItemsSource = BooksRepository.GetBooks().Where(x=>x.Format.ToString() == filter);
+            }
+            
+            
+        }
+
+        private void AddReadList_Click(object sender, RoutedEventArgs e)
+        {
+            var Button = sender as Button;
+            int BookID = int.Parse(Button.Tag.ToString());
+
+            Models.Book book = BooksRepository.GetBook(BookID);
+
+            UserRepository.AddToReadList(App.CurrentUser, book);
+        }
     }
 }

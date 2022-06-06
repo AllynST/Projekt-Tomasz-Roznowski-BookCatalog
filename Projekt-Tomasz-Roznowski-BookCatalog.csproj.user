@@ -16,7 +16,19 @@
     <Compile Update="UserControlPages\Author\AuthorsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControlPages\Book\AddBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Book\Book.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControlPages\Book\Books.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Book\FinishedBooks.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Book\ReadList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControlPages\Genre\AddGenre.xaml.cs">
@@ -26,6 +38,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControlPages\Genre\GenreList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Login\Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\Login\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -39,10 +57,22 @@
     <Page Update="UserControlPages\Author\AuthorsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UserControlPages\Book\AddBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Book\Book.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControlPages\Book\Books.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Book\FinishedBooks.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Book\ReadList.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlPages\Genre\AddGenre.xaml">
@@ -52,6 +82,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlPages\Genre\GenreList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Login\Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\Login\Register.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

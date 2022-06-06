@@ -52,6 +52,16 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
             _context.SaveChanges();
 
         }
+        public static void AddBookToAuthor(int AuthorID,Book book)
+        {
+            book.Book_ID = 7;
+            var author = _context.Authors.First(x=>x.Author_ID == AuthorID);
+            author.Books.Add(book);
+            
+            _context.Update(author);
+            
+            _context.SaveChanges();
+        }
 
     }
 

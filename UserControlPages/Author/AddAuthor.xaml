@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Author"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AddAuthor" Height="280" Width="270">
     <StackPanel Width="200">
         <Label>Name</Label>

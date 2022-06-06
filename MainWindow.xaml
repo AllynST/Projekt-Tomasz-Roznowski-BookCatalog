@@ -15,14 +15,27 @@
         >
     <Border CornerRadius="40" Background="#272537">
 
+        <StackPanel>
+            <Border MouseDown="TOOLBAR_MouseDown" Background="#0D0A0B" Opacity="0.8" CornerRadius="40 40 0 0">
+                <WrapPanel Height="90">
+                    <TextBlock FontSize="30" Height="80" Margin="50 35 0 0" VerticalAlignment="Center" Foreground="WhiteSmoke">
+                       <Bold> Book Catalog</Bold>
+                    </TextBlock>
+                    
+                </WrapPanel>
+            </Border>
+            
+            
+        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"></RowDefinition>
-                <RowDefinition Height="380"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="410"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
@@ -38,26 +51,34 @@
 
                     </Style>
                 </StackPanel.Resources>
-                <Button Foreground="#6479C4" FontSize="40">Menu</Button>
-                <Button Name="Authors" Click="Authors_Click" >Authors</Button>
-                <Button Name ="Books" Click="Books_Click" >Books</Button>
-                <Button Name="Genres" Click="Genres_Click">Genres</Button>
-                <Button Name="ReadList" Click="ReadList_Click">Read list</Button>
-                <Button Name="FBooks" Click="FBooks_Click">Finished books</Button>
+                
+                    
+                    <Button Foreground="#6479C4" FontSize="40">Menu</Button>
+                    <Button Name="Authors" Click="Authors_Click" >Authors</Button>
+                    <Button Name ="Books" Click="Books_Click" >Books</Button>
+                    <Button Name="Genres" Click="Genres_Click">Genres</Button>
+                    <Button Name="ReadList" Click="ReadList_Click">Read list</Button>
+                    <Button Name="FBooks" Click="FBooks_Click">Finished books</Button>
+                    <Button Name="ExitAPP" Foreground="Red" Click="ExitAPP_Click">Exit APP</Button>
+                   
+               
+                
 
             </StackPanel>
 
+            <Border BorderBrush="WhiteSmoke"  Margin="30" BorderThickness="1 0 0 0" Grid.Column="1" Grid.RowSpan="3">
+                <ContentControl Margin="20" Name="Main">
 
-            <ContentControl Name="Main" Grid.Column="1" Grid.RowSpan="3">
-
-            </ContentControl>
+                </ContentControl>
+            </Border>
+            
 
 
             <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom" Margin="15">
                 <Image Source="/Images/user.png" Height="59" Width="67"/>
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock Foreground="WhiteSmoke"><Run Text="Allyn"/></TextBlock>
-                    <TextBlock Height="auto" Foreground="WhiteSmoke" TextWrapping="Wrap" Opacity="0.5" Width="96"><Run Text="Tomaszroznowskii@gmail.com"/></TextBlock>
+                    <TextBlock Foreground="WhiteSmoke"><Run Name="AccountUserName" Text="Allyn"/></TextBlock>
+                    <TextBlock Height="auto" Foreground="WhiteSmoke" TextWrapping="Wrap" Opacity="0.5" Width="96"><Run Name="AccountMail" Text="Tomaszroznowskii@gmail.com"/></TextBlock>
                 </StackPanel>
             </StackPanel>
 
@@ -66,8 +87,8 @@
 
 
         </Grid>
-
+        </StackPanel>
     </Border>
 
-
+    
 </Window>

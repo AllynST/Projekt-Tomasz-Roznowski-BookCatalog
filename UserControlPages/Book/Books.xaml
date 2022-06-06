@@ -9,22 +9,60 @@
              Background="#272537">
     <StackPanel>
         <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Books</TextBlock>
-        <ListView Name="BooksTable" FontFamily="Courier New">
+        <TextBlock Width="auto">
+            <Button Width="100" Margin="0 0 10 10" Name="FilterBTN" Click="FilterBTN_Click">Filter</Button>
+            <ComboBox Width="100" Margin="0 0 0 10" HorizontalAlignment="Right" Name="FilterBox" SelectedValue="Default">
+                <ComboBoxItem Tag="Default">No Filter</ComboBoxItem>
+                <ComboBoxItem>PDF</ComboBoxItem>
+                <ComboBoxItem>MOBI</ComboBoxItem>
+                <ComboBoxItem>EPUB</ComboBoxItem>
+            </ComboBox>
+            <Button Width="100" Name="AddBookBTN" Click="AddBookBTN_Click" HorizontalAlignment="Right" Margin="500 0 0 10">Add Book</Button>
+        </TextBlock>
+        
+        <ListView Width="auto" Name="BooksTable" FontFamily="Courier New" >
 
             <ListView.View>
 
-                <GridView AllowsColumnReorder="false" ColumnHeaderToolTip="Books Table">
+                <GridView  AllowsColumnReorder="false" ColumnHeaderToolTip="Books Table">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Title}" Header="Title" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Genre}" Header="Genre" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Language}" Header="Language" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Author.Name}" Header="Author" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Format}" Header="Format" Width="100"/>
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Book_ID}" Header="ID" Width="auto"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Title}" Header="Title" Width="auto"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Genre.Genre_Name}" Header="Genre" Width="Auto"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Language}" Header="Language" Width="Auto"/>
+                    <GridViewColumn Header="Author" Width="Auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <Run Text="{Binding Author.Name}"></Run>
+                                    <Run Text="{Binding Author.Surname}"></Run>
+                                </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Format}" Header="Format" Width="auto"/>
 
                     <GridViewColumn Header="">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Go to Book page" Tag="{Binding Book_ID}"  Name="BookPage" Click="BookPage_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+                    <GridViewColumn Header="Delete book" Width="50">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="x" Tag="{Binding Book_ID}"  Name="DeleteBookBTN" Click="DeleteBookBTN_Click"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+                    <GridViewColumn Header="Add to read list" Width="auto">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="x" Tag="{Binding Book_ID}"  Name="AddReadList" Click="AddReadList_Click"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
 

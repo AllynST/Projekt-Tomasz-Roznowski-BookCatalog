@@ -16,12 +16,12 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
 
         public static List<Book> GetBooks()
         {
-            return _context.Books.ToList();
+            return _context.Books.Include(x=>x.Author).Include(y=>y.Genre).ToList();
         }
 
         public static Book GetBook(int id)
         {
-            return _context.Books.Where(x=>x.Book_ID == id).FirstOrDefault();
+            return _context.Books.Include(x=>x.Author).Include(x=>x.Genre).Where(x=>x.Book_ID == id).FirstOrDefault();
         }
 
         public static void AddBook(Book book)

@@ -29,10 +29,15 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Author
             
                Models.Author author = AuthorRepository.GetAuthorByID(id);
 
+            
+               
+               //AuthorImg.Source = new BitmapImage(new Uri($"ms-appx:///AuthorPictures/Author{author.Author_ID}.jpeg")); ;
                AuthorName.Text = author.Name;
                AuthorSurname.Text = author.Surname;
                AuthorDate.Text = author.DateOfBirth.ToString("d");
                AuthorDesc.Text = author.Description;
+               AuthorBooks.Text = author.Books.Count.ToString();
+               
         }
     }
 }

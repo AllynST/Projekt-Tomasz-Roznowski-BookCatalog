@@ -9,10 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AuthorPictures\Author1.jpeg" />
     <None Remove="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AuthorPictures\Author1.jpeg" />
     <Resource Include="Images\user.png" />
   </ItemGroup>
 

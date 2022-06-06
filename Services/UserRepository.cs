@@ -1,4 +1,5 @@
-﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Projekt_Tomasz_Roznowski_BookCatalog.Data;
 using Projekt_Tomasz_Roznowski_BookCatalog.Models;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,55 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         {
             return _context.Users.Find(id);
         }
-        public static List<Book> GetReadList(int id)
+        public static List<Book> GetReadList(string UserName)
         {
-            return _context.Users.Find(id).ReadList.ToList() ;
+            return _context.Users.Where(x => x.User_Name == UserName).Include(x => x.ReadList).FirstOrDefault().ReadList.ToList();
+        }
+        public static List<Book> GetFinishedBooks(string UserName)
+        {
+            return _context.Users.Where(x => x.User_Name == UserName).Include(x => x.FinishedBooks).FirstOrDefault().FinishedBooks.ToList();
+        }
+
+        public static void AddToFinishedList(string UserName, Book book)
+        {
+            User user = _context.Users.Where(x => x.User_Name == UserName).FirstOrDefault();
+            user.ReadList.Remove(book);
+            user.FinishedBooks.Add(book);
+            _context.Users.Update(user);
+            _context.SaveChanges();
+
+        }
+
+
+        public static void AddToReadList(string UserName, Book book)
+        {
+            User user = _context.Users.Where(x => x.User_Name == UserName).FirstOrDefault();
+            user.ReadList.Add(book);
+            _context.Users.Update(user);
+            _context.SaveChanges();
+        }
+
+        public static void DeleteFromReadList(string Username,int BookID) {
+            Book book = _context.Books.Find(BookID);
+            User user = _context.Users.Where(x=>x.User_Name == Username).FirstOrDefault();
+            user.ReadList.Remove(book);
+            _context.SaveChanges();
+        }
+        public static void DeleteFromFinished(string Username, int BookID) {
+            Book book = _context.Books.Find(BookID);
+            User user = _context.Users.Where(x => x.User_Name == Username).FirstOrDefault();
+            user.FinishedBooks.Remove(book);
+            _context.SaveChanges();
         }
         public static void AddUser(User user)
         {
             _context.Users.Add(user);
             _context.SaveChanges();
+        }
+        
+        public static User Login(string Login,string Password)
+        {
+            return _context.Users.Where(x=>x.User_Name == Login).Where(x=>x.Password == Password).FirstOrDefault();
         }
         public static void DeleteUser(int id)
         {

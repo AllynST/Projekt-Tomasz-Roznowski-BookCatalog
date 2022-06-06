@@ -51,10 +51,14 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Migrations
                     b.Property<int>("Author_ID")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Format")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Genre_ID")
+                    b.Property<int?>("Genre_ID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Language")
@@ -171,9 +175,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Migrations
 
                     b.HasOne("Projekt_Tomasz_Roznowski_BookCatalog.Models.Genre", "Genre")
                         .WithMany("Books")
-                        .HasForeignKey("Genre_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Genre_ID");
 
                     b.HasOne("Projekt_Tomasz_Roznowski_BookCatalog.Models.User", null)
                         .WithMany("FinishedBooks")

@@ -1,4 +1,6 @@
 ﻿using Projekt_Tomasz_Roznowski_BookCatalog.Data;
+using Projekt_Tomasz_Roznowski_BookCatalog.Models;
+using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book;
 using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Genre;
 using System;
 using System.Collections.Generic;
@@ -22,11 +24,21 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     /// </summary>
     public partial class MainWindow : Window
     {
+        public User user;
         
 
-        public MainWindow()
-        {            
-            InitializeComponent();            
+        public MainWindow(User user)
+        {
+            this.user = user;
+            InitializeComponent();
+            LoadData();
+
+        }
+        public void LoadData()
+        {
+            AccountUserName.Text = user.User_Name;
+            AccountMail.Text = user.Email;
+            App.CurrentUser = user.User_Name;
         }
        
         private void Books_Click(object sender, RoutedEventArgs e)
@@ -36,7 +48,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
         private void Authors_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new AuthorsPage();
+            Main.Content = new BooksPage();
         }
 
         private void Genres_Click(object sender, RoutedEventArgs e)
@@ -46,12 +58,22 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
 
         private void ReadList_Click(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new ReadList();
         }
 
         private void FBooks_Click(object sender, RoutedEventArgs e)
         {
+            Main.Content = new FinishedBooks();
+        }
 
+        private void TOOLBAR_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void ExitAPP_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
