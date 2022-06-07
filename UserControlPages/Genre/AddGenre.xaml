@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="AddGenre" Height="150" Width="200">
-    
-    <StackPanel>
+
+    <StackPanel Background="#272537">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}" >
+                <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+            </Style>
+        </StackPanel.Resources>
         <Label Margin="0 10 0 0" Width="100">Genre name:</Label>
         <TextBox Margin="0 0 0 10" Width="100" Name="GenreName"></TextBox>
-        <Button Name="AddGenreBTN" Click="AddGenreBTN_Click" Width="100">Add Genre</Button>
+        <Button Name="AddGenreBTN" Click="AddGenreBTN_Click" Width="100" Background="Teal">Add Genre</Button>
     </StackPanel>
 </Window>

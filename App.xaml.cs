@@ -19,6 +19,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
     {
         public static CatalogContext dbContext = new();
         public static string CurrentUser;
+        public static int CurrentUserID;
 
         private async void Application_Startup(object sender, StartupEventArgs e)
         {

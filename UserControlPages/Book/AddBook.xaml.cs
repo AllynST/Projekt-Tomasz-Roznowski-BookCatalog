@@ -37,6 +37,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book
 
         private void AddBookBTN_Click(object sender, RoutedEventArgs e)
         {
+            
             int AuthorID = ((Models.Author)BookAuthor.SelectedItem).Author_ID;
 
             
@@ -55,7 +56,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book
 
             Application.Current.Windows[2].Close();
 
-            Content = new BooksPage();
+            Content = new Books();
         }
     }
 }

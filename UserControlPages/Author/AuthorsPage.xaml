@@ -8,7 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     
     <StackPanel>
-        <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Authors</TextBlock>
+        <Border BorderBrush="White" BorderThickness="0 0 0 1" Margin="0 0 0 30">
+            <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Authors</TextBlock>
+        </Border>
         <Button Width="120" HorizontalAlignment="Right" Margin="0 0 25 10" Name="AddAuthorBTN" Click="AddAuthorBTN_Click" Content="Add Author"/>
         <ListView Name="AuthorsTable" FontFamily="Courier New">
             
@@ -18,12 +20,12 @@
 
                     <GridViewColumn DisplayMemberBinding="{Binding Author_ID}" Header="ID" Width="20"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="100"/>                    
-                    <GridViewColumn DisplayMemberBinding="{Binding DateOfBirth}" Header="DateOfBirth" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Books.Count}" Header="Books" Width="100"/>                  
+                    <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Books.Count}" Header="Nr. Books" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding DateOfBirth}" Header="DateOfBirth" Width="100"/>                                  
 
 
-                    <GridViewColumn Header="">
+                    <GridViewColumn Header=""> 
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>                                
                                 <Button Content="Go to author page" Tag="{Binding Author_ID}"  Name="AuthorPage" Click="AuthorPage_Click"></Button>

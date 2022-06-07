@@ -16,7 +16,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
 
         public static List<Genre> GetGenres()
         {
-            return _context.Genres.Include(x=>x.Books).ToList();
+            return _context.Genres.AsNoTracking().Include(x=>x.Books).ToList();
         }
 
         public static Genre GetGenreById(int id)

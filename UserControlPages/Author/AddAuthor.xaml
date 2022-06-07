@@ -7,17 +7,24 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="AddAuthor" Height="280" Width="270">
-    <StackPanel Width="200">
-        <Label>Name</Label>
-        <TextBox Name="AuthorName"></TextBox>
-        <Label>Surname</Label>
-        <TextBox Name="AuthorSurname"></TextBox>
-        <Label>Date of birth</Label>
-        <TextBox Name="AuthorDate"></TextBox>
-        <Label>Author Description</Label>
-        <TextBox Height="50" Name="AuthorDesc"></TextBox>
-        <Button Margin="20" Name="AddAuthorBTN" Click="AddAuthorBTN_Click">Add Author</Button>
-        
+    <StackPanel Width="Auto"  Background="#272537">
+        <StackPanel Width="200">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Label>Name</Label>
+            <TextBox Name="AuthorName"></TextBox>
+            <Label>Surname</Label>
+            <TextBox Name="AuthorSurname"></TextBox>
+            <Label>Date of birth</Label>
+            <TextBox Name="AuthorDate"></TextBox>
+            <Label>Author Description</Label>
+            <TextBox Height="50" Name="AuthorDesc"></TextBox>
+            <Button Margin="20" Name="AddAuthorBTN" Click="AddAuthorBTN_Click" Background="Teal">Add Author</Button>
+
+        </StackPanel>       
         
     </StackPanel>
 </Window>

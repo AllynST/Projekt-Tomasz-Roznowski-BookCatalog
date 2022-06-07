@@ -50,8 +50,21 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Genre
         {
             var Button = sender as Button;
             var DeleteID = int.Parse(Button.Tag.ToString());
-            GenresRepository.DeleteGenre(DeleteID);
-            Content = new GenreList();
+
+            MessageBoxResult result = MessageBox.Show("Do you want to delete this genre?", "Confirmation",
+              MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                GenresRepository.DeleteGenre(DeleteID);
+                MessageBox.Show("Genre deleted");                
+                Content = new GenreList();
+            }
+            else if (result == MessageBoxResult.No)
+            {
+
+            }
+            
+            
         }
     }
 }

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book.EditBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"        
+        Title="EditBook" Height="420" Width="400">
+    <Grid Height="Auto" Background="#272537" Opacity="0.95">
+        <StackPanel Width="200">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Label>Title</Label>
+            <TextBox Name="BookTitle"></TextBox>
+
+            <Label>Genre</Label>
+            <ComboBox Name="BookGenre">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding Genre_Name}"></Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Label>Author</Label>
+            <ComboBox Name="BookAuthor">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding Name}"></Run>
+                            <Run Text="{Binding Surname}"></Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <Label>Book Language</Label>
+            <TextBox Name="BookLang"></TextBox>
+
+            <Label>Book Format</Label>
+            <ComboBox Name="BookFormat">
+            </ComboBox>
+
+            <Label>Book Description</Label>
+            <TextBox Height="auto" TextWrapping="Wrap" Name="BookDesc"></TextBox>
+
+            <Button Margin="20" Name="EditBookBTN" Click="EditBookBTN_Click" Background="Teal">EditBook</Button>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

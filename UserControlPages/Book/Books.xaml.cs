@@ -49,10 +49,20 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
         {
             var Button = sender as Button;
             int BookID = int.Parse(Button.Tag.ToString());
+              
 
-            BooksRepository.DeleteBook(BookID);
+            MessageBoxResult result = MessageBox.Show("Confirm book deletion","Confirmation",
+                MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                BooksRepository.DeleteBook(BookID);
 
-            Content = new Books();
+                Content = new Books();
+            }
+            else if(result == MessageBoxResult.No)
+            {
+                
+            }
 
         }
         private void FilterBTN_Click(object sender, RoutedEventArgs e)

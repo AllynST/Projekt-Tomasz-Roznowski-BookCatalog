@@ -30,24 +30,24 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
             _context.SaveChanges();
         }
         public static void DeleteBook(int id)
-        {
-            //NIEPRZESTESTOWANE
+        {         
             Book book = _context.Books.Find(id);
             _context.Remove(book);
             _context.SaveChanges();
 
         }
 
-        public static void ModifyBook(Book book)
+        public static void ModifyBook(Book book,int ID)
         {
 
             //UNTESTED
-            Book before = _context.Books.Find(book.Book_ID);
+            Book before = _context.Books.Find(ID);
 
             before.Title = book.Title;
             before.Author = book.Author;
             before.Format = book.Format;
             before.Language = book.Language;
+            before.Description = book.Description;
 
             _context.Books.Update(before);
             _context.SaveChanges();

@@ -28,7 +28,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Login
 
         private void RegisterBTN_Click(object sender, RoutedEventArgs e)
         {
-            User user = new()
+            Models.User user = new()
                 {
                     CreatedDate = DateTime.Now,
                     User_Name = UsernameBox.Text,
@@ -41,7 +41,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Login
             UserRepository.AddUser(user);
 
 
-            User registeredUser = UserRepository.Login(user.User_Name, user.Password);
+            Models.User registeredUser = UserRepository.Login(user.User_Name, user.Password);
             if(registeredUser != null)
             {
                 MainWindow mainwindow = new(user);

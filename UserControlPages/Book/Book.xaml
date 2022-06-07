@@ -62,7 +62,11 @@
 
             <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0">
                 <Border BorderThickness="0 0 0 1" BorderBrush="WhiteSmoke">
-                <TextBlock Foreground="WhiteSmoke" Margin="10 0 0 0" FontSize="35">Opis:</TextBlock>
+                    <WrapPanel>
+                        <TextBlock Foreground="WhiteSmoke" Margin="10 0 0 0" FontSize="35">Opis:</TextBlock>
+                        <Button Margin="629 0 0 0" HorizontalAlignment="Center" Name="EditBook" Click="EditBook_Click" Background="Teal" Height="30" Width="100">Edit Book</Button>
+                    </WrapPanel>
+                
                 </Border>
                 <TextBlock Foreground="WhiteSmoke" TextWrapping="Wrap" FontSize="23" TextAlignment="Justify" Name="BookDesc"></TextBlock>
             </StackPanel>

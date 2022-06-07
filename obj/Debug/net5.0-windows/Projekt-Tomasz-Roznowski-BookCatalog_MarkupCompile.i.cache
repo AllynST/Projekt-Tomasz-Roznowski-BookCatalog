@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\App.xaml
-14-2056967630
+17-284454715
 
-32-2099924469
+351938822966
 213-2022747839
-MainWindow.xaml;UserControlPages\Author\AddAuthor.xaml;UserControlPages\Author\AuthorPage.xaml;UserControlPages\Author\AuthorsPage.xaml;UserControlPages\Book\AddBook.xaml;UserControlPages\Book\Book.xaml;UserControlPages\Book\Books.xaml;UserControlPages\Book\FinishedBooks.xaml;UserControlPages\Book\ReadList.xaml;UserControlPages\Genre\AddGenre.xaml;UserControlPages\Genre\GenreDetails.xaml;UserControlPages\Genre\GenreList.xaml;UserControlPages\Login\Login.xaml;UserControlPages\Login\Register.xaml;
+MainWindow.xaml;UserControlPages\Author\AddAuthor.xaml;UserControlPages\Author\AuthorPage.xaml;UserControlPages\Author\AuthorsPage.xaml;UserControlPages\Book\AddBook.xaml;UserControlPages\Book\Book.xaml;UserControlPages\Book\Books.xaml;UserControlPages\Book\EditBook.xaml;UserControlPages\Book\FinishedBooks.xaml;UserControlPages\Book\ReadList.xaml;UserControlPages\Genre\AddGenre.xaml;UserControlPages\Genre\GenreDetails.xaml;UserControlPages\Genre\GenreList.xaml;UserControlPages\Login\Login.xaml;UserControlPages\Login\Register.xaml;UserControlPages\User\EditUserData.xaml;UserControlPages\User\UserData.xaml;
 
 True
 

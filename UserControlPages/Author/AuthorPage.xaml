@@ -10,7 +10,7 @@
 
         
 
-        <Grid Margin="65">
+        <Grid Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150" ></ColumnDefinition>
                 <ColumnDefinition Width="370"></ColumnDefinition>
@@ -69,7 +69,7 @@
 
             <StackPanel Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0">
                 <TextBlock Foreground="WhiteSmoke" FontSize="35">Opis:</TextBlock>
-                <TextBlock Foreground="WhiteSmoke" FontSize="15" TextWrapping="Wrap" Name="AuthorDesc">
+                <TextBlock Foreground="WhiteSmoke" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Name="AuthorDesc">
                     
                     Malarz tynkarz akrobata herbu Poraj[1] (ur. 24 grudnia 1798 w Zaosiu lub Nowogródku[a][2][3], zm. 26 listopada 1855 w Stambule) – polski poeta, działacz polityczny, publicysta, tłumacz, filozof, działacz religijny, mistyk, organizator i dowódca wojskowy, nauczyciel akademicki.
 ’Église et le Messie umieszczone zostały w Indeksie ksiąg zakazanych Kościoła katolickiego (index librorum prohibitorum) dekretami z 1848[12].

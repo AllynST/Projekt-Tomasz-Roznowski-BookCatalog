@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.User.UserData"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.User"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                <Setter Property="FontSize" Value="25"></Setter>
+                <Setter Property="Margin" Value="40 0 0 0"></Setter>
+            </Style>
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="25"></Setter>
+                <Setter Property="Margin" Value="20 0 0 0"></Setter>
+            </Style>
+        </StackPanel.Resources>
+        <Border BorderBrush="White" BorderThickness="0 0 0 1" Margin="0 0 0 30">
+            <TextBlock Foreground="WhiteSmoke" Margin="20" FontSize="40" HorizontalAlignment="Center">Account details</TextBlock>
+        </Border>
+        <WrapPanel>
+            <Label>
+                Username:
+            </Label>
+            <TextBlock Name="UsernameBox">
+                Allyn
+            </TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <Label>
+                Name:
+            </Label>
+            <TextBlock Name="NameBox">
+                Allan
+            </TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <Label>
+                Surname:
+            </Label>
+            <TextBlock Name="SurnameBox">
+                Strawpool
+            </TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <Label>
+                Email:
+            </Label>
+            <TextBlock Name="EmailBox">
+                Allan@gmail.com
+            </TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <Label>
+                Created date:
+            </Label>
+            <TextBlock Name="CreatedBox">
+                19/02/2000
+            </TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <Label>
+                Password:
+            </Label>
+            <TextBlock Name="PasswordBox">
+                Topsecretstring
+            </TextBlock>
+        </WrapPanel>
+
+        <Button Background="Teal" Name="EditCred" Click="EditCred_Click" Width="200" Margin="100 35 0 0" HorizontalAlignment="Left">Edit account credentials</Button>
+    </StackPanel>
+</UserControl>

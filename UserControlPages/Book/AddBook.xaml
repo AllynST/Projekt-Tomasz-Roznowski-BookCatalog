@@ -6,9 +6,14 @@
         xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AddBook" Height="400" Width="400">
-    <Grid>
+        Title="AddBook" Height="420" Width="400">
+    <Grid Height="Auto" Background="#272537" Opacity="0.95">
         <StackPanel Width="200">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+                </Style>
+            </StackPanel.Resources>
             <Label>Title</Label>
             <TextBox Name="BookTitle"></TextBox>
             
@@ -45,7 +50,7 @@
             <Label>Book Description</Label>
             <TextBox Height="auto" TextWrapping="Wrap" Name="BookDesc"></TextBox>
             
-            <Button Margin="20" Name="AddBookBTN" Click="AddBookBTN_Click">Add Author</Button>
+            <Button Margin="20" Name="AddBookBTN" Click="AddBookBTN_Click" Background="Teal">Add Book</Button>
 
 
         </StackPanel>

@@ -21,8 +21,10 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book
     /// </summary>
     public partial class Genre : UserControl
     {
+        private int BookID { get; set; }
         public Genre(int id)
         {
+            this.BookID = id;
             InitializeComponent();
             Models.Book book = BooksRepository.GetBook(id);
             LoadData(book);
@@ -35,6 +37,12 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book
             Language.Text = book.Language;
             Format.Text = book.Format.ToString();
             BookDesc.Text = book.Description;
+        }
+
+        private void EditBook_Click(object sender, RoutedEventArgs e)
+        {           
+            EditBook window = new(this.BookID);
+            window.Show();
         }
     }
 }

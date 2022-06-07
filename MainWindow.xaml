@@ -13,16 +13,32 @@
         Background="Transparent"
         AllowsTransparency="True"        
         >
-    <Border CornerRadius="40" Background="#272537">
+    <Border CornerRadius="40" BorderBrush="Teal" BorderThickness="1" Background="#272537">
 
         <StackPanel>
-            <Border MouseDown="TOOLBAR_MouseDown" Background="#0D0A0B" Opacity="0.8" CornerRadius="40 40 0 0">
+            <Border MouseDown="TOOLBAR_MouseDown" Background="Teal" Opacity="0.7" CornerRadius="40 40 0 0">
                 <WrapPanel Height="90">
-                    <TextBlock FontSize="30" Height="80" Margin="50 35 0 0" VerticalAlignment="Center" Foreground="WhiteSmoke">
+                    <TextBlock FontSize="35" Height="80" Margin="40 25 0 0" VerticalAlignment="Center" Foreground="Black">
                        <Bold> Book Catalog</Bold>
                     </TextBlock>
-                    
+                    <StackPanel Margin="600 0 0 0" Orientation="Horizontal"  VerticalAlignment="Center" >
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="Foreground" Value="Black"></Setter>
+                                <Setter Property="FontSize" Value="12"></Setter>
+                                <Setter Property="FontWeight" Value="Bold"></Setter>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Image Source="/Images/user.png" Height="59" Width="67"/>
+                        <StackPanel VerticalAlignment="Center">
+                            
+                            <TextBlock ><Run Name="AccountUserName" Text="Allyn"/></TextBlock>
+                            <TextBlock Height="auto"  TextWrapping="Wrap" Opacity="0.5" Width="180"><Run Name="AccountMail" Text="Tomaszroznowskii@gmail.com"/></TextBlock>
+                           
+                        </StackPanel>
+                    </StackPanel>
                 </WrapPanel>
+                
             </Border>
             
             
@@ -35,8 +51,7 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="410"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="500"></RowDefinition>                
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="1" >
@@ -59,6 +74,7 @@
                     <Button Name="Genres" Click="Genres_Click">Genres</Button>
                     <Button Name="ReadList" Click="ReadList_Click">Read list</Button>
                     <Button Name="FBooks" Click="FBooks_Click">Finished books</Button>
+                    <Button Name="Account" Click="Account_Click">Account</Button>
                     <Button Name="ExitAPP" Foreground="Red" Click="ExitAPP_Click">Exit APP</Button>
                    
                
@@ -74,13 +90,7 @@
             
 
 
-            <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Bottom" Margin="15">
-                <Image Source="/Images/user.png" Height="59" Width="67"/>
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Foreground="WhiteSmoke"><Run Name="AccountUserName" Text="Allyn"/></TextBlock>
-                    <TextBlock Height="auto" Foreground="WhiteSmoke" TextWrapping="Wrap" Opacity="0.5" Width="96"><Run Name="AccountMail" Text="Tomaszroznowskii@gmail.com"/></TextBlock>
-                </StackPanel>
-            </StackPanel>
+            
 
 
 

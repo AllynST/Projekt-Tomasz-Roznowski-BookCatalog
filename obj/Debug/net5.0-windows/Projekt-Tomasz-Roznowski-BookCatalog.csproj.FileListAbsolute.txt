@@ -83,3 +83,9 @@ C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\ReadList.g.cs
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\FinishedBooks.baml
 C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\ReadList.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\EditBook.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\Book\EditBook.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\User\EditUserData.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\User\UserData.g.cs
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\User\EditUserData.baml
+C:\Users\Allyn\source\repos\Projekt-Tomasz-Roznowski-BookCatalog\Projekt-Tomasz-Roznowski-BookCatalog\obj\Debug\net5.0-windows\UserControlPages\User\UserData.baml

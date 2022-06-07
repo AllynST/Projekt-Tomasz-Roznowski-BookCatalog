@@ -25,6 +25,9 @@
     <Compile Update="UserControlPages\Book\Books.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControlPages\Book\EditBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControlPages\Book\FinishedBooks.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -44,6 +47,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControlPages\Login\Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\User\EditUserData.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlPages\User\UserData.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -69,6 +78,9 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UserControlPages\Book\EditBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControlPages\Book\FinishedBooks.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -88,6 +100,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlPages\Login\Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\User\EditUserData.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlPages\User\UserData.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

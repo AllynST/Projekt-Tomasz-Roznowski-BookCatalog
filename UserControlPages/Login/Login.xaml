@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Login"
         mc:Ignorable="d"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
-        Title="Login" Height="380" Width="300" Background="#272537">
-    <Border CornerRadius="40">
+        AllowsTransparency="True"
+        Title="Login" Height="300" Width="300" Background="Transparent">
+    <Border CornerRadius="40" BorderBrush="Teal" BorderThickness="1" Background="#272537">
         <StackPanel Margin="40">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Label}">

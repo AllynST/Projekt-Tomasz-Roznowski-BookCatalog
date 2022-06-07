@@ -7,22 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
 {
     static class AuthorRepository
     {
+
         private static CatalogContext _context = new();
 
 
         public static List<Author> GetAuthorsList()
-        {
-
-            return _context.Authors.Include(x=>x.Books).ToList();
+        {   
+            
+            
+            return _context.Authors.Include(x=>x.Books).AsNoTracking().ToList(); ;
         }
 
         public static Author GetAuthorByID(int id)
         {
-            return _context.Authors.Include(x=>x.Books).Where(item=> item.Author_ID == id).First();
+            return _context.Authors.AsNoTracking().Include(x=>x.Books).Where(item=> item.Author_ID == id).First();
         }
 
         public static void DeleteAuthor(int id)
@@ -54,12 +57,12 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         }
         public static void AddBookToAuthor(int AuthorID,Book book)
         {
-            book.Book_ID = 7;
-            var author = _context.Authors.First(x=>x.Author_ID == AuthorID);
-            author.Books.Add(book);
             
-            _context.Update(author);
+            var author = _context.Authors.Find(AuthorID);
             
+            author.Books.Add(book);            
+           
+            _context.Authors.Update(author);
             _context.SaveChanges();
         }
 

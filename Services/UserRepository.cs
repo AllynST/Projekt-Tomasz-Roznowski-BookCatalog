@@ -20,11 +20,11 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         }
         public static List<Book> GetReadList(string UserName)
         {
-            return _context.Users.Where(x => x.User_Name == UserName).Include(x => x.ReadList).FirstOrDefault().ReadList.ToList();
+            return _context.Users.Where(x => x.User_Name == UserName).AsNoTracking().Include(x => x.ReadList).FirstOrDefault().ReadList.ToList();
         }
         public static List<Book> GetFinishedBooks(string UserName)
         {
-            return _context.Users.Where(x => x.User_Name == UserName).Include(x => x.FinishedBooks).FirstOrDefault().FinishedBooks.ToList();
+            return _context.Users.Where(x => x.User_Name == UserName).AsNoTracking().Include(x => x.FinishedBooks).FirstOrDefault().FinishedBooks.ToList();
         }
 
         public static void AddToFinishedList(string UserName, Book book)
@@ -70,7 +70,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         }
         public static void DeleteUser(int id)
         {
-
+            
             //UNTESTED
             User user = _context.Users.Find(id);
             _context.Remove(user);
@@ -80,7 +80,7 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.Services
         {
 
             //UNTESTED
-            User before = _context.Users.Find(user.User_ID);
+            User before = _context.Users.Find(App.CurrentUserID);
 
             before.User_Name = user.User_Name;
             before.Surname = user.Surname;

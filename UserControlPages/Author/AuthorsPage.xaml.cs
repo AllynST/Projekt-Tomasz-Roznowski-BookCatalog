@@ -28,8 +28,8 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
         public BooksPage()
         {
             InitializeComponent();
-
-            AuthorsTable.ItemsSource = AuthorRepository.GetAuthorsList();
+             
+            AuthorsTable.ItemsSource = AuthorRepository.GetAuthorsList(); ;
             
         }
 
@@ -52,8 +52,21 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
             var Button = sender as Button;
             var DeleteID = int.Parse(Button.Tag.ToString());
 
-            AuthorRepository.DeleteAuthor(DeleteID);
-            Content = new BooksPage();
+            MessageBoxResult result = MessageBox.Show("Do you want to delete this author?", "Confirmation",
+              MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                AuthorRepository.DeleteAuthor(DeleteID);
+                MessageBox.Show("Author deleted");
+                Content = new BooksPage();
+            }
+            else if (result == MessageBoxResult.No)
+            {
+
+            }
+
+
+            
 
         }
 

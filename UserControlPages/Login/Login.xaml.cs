@@ -42,12 +42,13 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Login
             string Login = LoginBox.Text;
             string Password = PasswordBox.Password;
 
-            User user = UserRepository.Login(Login, Password);
+            Models.User user = UserRepository.Login(Login, Password);
 
             if(user != null)
             {
                 MainWindow window = new MainWindow(user);
                 App.CurrentUser = user.User_Name;
+                App.CurrentUserID = user.User_ID;
                 window.Show();
                 Application.Current.Windows[0].Close();
             }

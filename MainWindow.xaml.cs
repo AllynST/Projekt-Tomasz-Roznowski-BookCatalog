@@ -2,6 +2,7 @@
 using Projekt_Tomasz_Roznowski_BookCatalog.Models;
 using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Book;
 using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.Genre;
+using Projekt_Tomasz_Roznowski_BookCatalog.UserControlPages.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,6 +75,11 @@ namespace Projekt_Tomasz_Roznowski_BookCatalog
         private void ExitAPP_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Account_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new UserData();
         }
     }
 }
